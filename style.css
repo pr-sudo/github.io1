@@ -1,0 +1,413 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body{
+  width: 100%;
+  background: url(Hero.jpg) no-repeat 50% 50% ;
+  background-size: cover;
+  /* display: table; */
+
+}
+nav{
+  width: 100%;
+  background: #003559;
+  height: 89px;
+  position: static;
+  z-index:1;
+}
+nav #brand{
+  float: left;
+  display: block;
+  margin-left: 84px;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: bold;
+}
+img{
+  margin-top: 15px;
+}
+}
+nav #brand a{
+  color: #fff;
+  transition: all 0.3s ease-out;
+  font-weight: 300;
+}
+nav #menu{
+  float: left;
+  left: 50%;
+  position: relative;
+}
+nav #menu li{
+  display: inline-block;
+  padding: 0px 30px;
+  cursor: pointer;
+  line-height: 70px;
+  position: relative;
+  top: 10px;
+  right: 500px;
+  transition: all 0.3s ease-out;
+}
+nav #menu li a{
+  color: #fff;
+  font-weight: 200;
+  text-decoration: none;
+}
+#toggle{
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  z-index: 999;
+  width: 40px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+#toggle .span{
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+  backface-visibility: hidden;
+  margin: 5px auto;
+}
+#toggle.on #one{
+  transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+#toggle.on #two{
+  opacity: 0;
+}
+#toggle.on #three{
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+#resize{
+  z-index: 1;
+  top: 78px;
+  right: 0px;
+  position: absolute;
+  background: #0c1e55;
+  width: 40%;
+  height: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  display: table;
+
+}
+#resize #menu{
+  height: 10px;
+  display: table-cell;
+  vertical-align: center;
+}
+#resize #menu li{
+  display:block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-size: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  height: 0px;
+  border-bottom: 1px solid #fff;
+}
+
+#resize #menu li a{
+  color: #fff;
+}
+#resize.active{
+  visibility: visible;
+  opacity: 0.99;
+}
+
+@media(max-width:950px){
+  #toggle{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+  }
+
+  nav #brand{
+    margin-left: 18px;
+  }
+  nav #menu{
+    display: none;
+  }
+  #menu a{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+  }
+  nav{
+    background: #243d8b;
+    height: 80px;
+  }
+}
+@media(min-width:950px){
+  #resize{
+    visibility: hidden !important;
+  }
+}
+
+/* guise */
+.guise{
+  width: 100%;
+  height: 120px;
+  padding-top: 15px;
+  margin-bottom:15px;
+
+}
+.guise ul{
+  margin: 30px auto;
+  max-width: 1170px;
+}
+.container{
+  width: 100%;
+  padding-left: 10px;
+}
+.guise li{
+  padding: 0;
+  margin: 0;
+  float: left;
+  max-width: 200px;
+  width: 16.6%;
+  border-left: 1px solid #243d8b;
+}
+.guise li a{
+  color: #243d8b;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding-top: 60px;
+}
+.first a{
+  background: url(日本地図のアイコン.png)  no-repeat center 3px;
+  background-size: 50px;
+
+}
+.second a{
+  background: url(ショッピングの無料アイコン　3.png) no-repeat center 3px;
+  background-size: 50px;
+}
+.third a{
+  background: url(スパナーのフリーアイコン.png) no-repeat center 3px;
+  background-size: 50px;
+}
+.forth a{
+  background: url(サラリーマン.png) no-repeat center 3px;
+  background-size: 50px;
+}
+.fifth a{
+  background: url(ハルスヘーベル3.png) no-repeat center 3px;
+  background-size: 50px;
+}
+.sixth a{
+  background: url(書類検索アイコン1.png) no-repeat center 3px;
+  background-size: 50px;
+}
+@media(max-width:500px){
+  .container li{
+    width: 50%;
+    border: 1px solid #333;
+    max-width: 300px;
+  }
+}
+
+ #pankuzu{
+   background: #e3e3e5;
+   height: 50px;
+   -webkit-box-shadow: inset -1px 9px 0px -1px rgba(189,189,189,1);
+-moz-box-shadow: inset -1px 9px 0px -1px rgba(189,189,189,1);
+box-shadow: inset -1px 9px 0px -1px rgba(189,189,189,1);
+
+}
+ #pankuzu .content{
+   margin-left: 50px;
+   padding-top: 5px;
+   max-width: 1170px;
+   width: 100%;
+   max-width: 1170px;
+   margin: 0 auto;
+ }
+ #pankuzu a{
+  color: #243d8b;
+  font-size: 12px;
+ }
+#pankuzu img{
+  width: 15px;
+  height: 15px;
+}
+/* page */
+#page{
+
+}
+#page .contents{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+#page .page-title{
+  padding-top: 40px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  color: #243d8b;
+  border-bottom: 5px solid #243d8b;
+
+
+}
+dl{
+  background: #f6f6f8;
+  float: left;
+  border-bottom: solid 1px #dedede;
+  width: 55%;
+  color: #333333;
+  font-weight: 100;
+}
+dt{
+  width: 20%;
+  float: left;
+  padding: 15px;
+  border-top:solid 1px #dedede;
+  color: #243d8b;
+  background: #f6f6f8;
+}
+dd{
+  width: 80%;
+  padding-top: 15px;
+  padding-left: 10px;
+  margin-left: 171px;
+  padding-bottom: 15px;
+  background: #FFFFFF;
+  border-top: solid 1px #dedede;
+}
+dd:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+iframe{
+  width: 40%;
+  margin-left: 5%;
+}
+
+.car{
+  background: #f6f6f8;
+  color: #243d8b;
+}
+.transmit{
+  background: #f6f6f8;
+  color: #243d8b;
+  margin-bottom: 10px;
+}
+.train{
+  font-weight: 900;
+  color: #333;
+}
+.bus{
+  font-weight: 900;
+  color: #333;
+}
+.access{
+  margin-left: 30px;
+}
+.ic{
+  padding: 10px 0;
+}
+@media (max-width:970px) {
+  dl{
+    width: 100%;
+
+  }
+  iframe{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+.weeks{
+  clear: both;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  border-bottom: 1px dashed #333;
+}
+.weeks-title{
+  color: #243d8b;
+  padding:70px 0 30px 10px;
+  font-size: 10px;
+}
+.weeks a{
+  text-decoration: none;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 100;
+}
+.discount img{
+  float: left;
+  border: 1px solid #CCCCCC
+}
+.shufoo-text p{
+ text-decoration: none;
+ margin-left: 60px;
+}
+.shufoo-text{
+  float: left;
+}
+.shufoo-main{
+  padding-left: 10px;
+}
+.img img{
+  float: right;
+  display: block;
+  clear: right;
+  margin-right: 30px;
+}
+.clear{
+  clear: both;
+}
+footer{
+  width: 100%;
+}
+
+#footer-top{
+  margin-top: 60px;
+  background: #f6f6f6;
+  height: 60px;
+}
+.footer-contents{
+  background: #243d8b;
+  height: 80px;
+}
+footer a{
+  color: #fff;
+}
+footer ul{
+  margin-left: 60px;
+}
+footer li{
+  float: left;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.footer-logo{
+  background: #02386E;
+  height: 60px;
+}
+footer img{
+  width: 250px;
+  margin-left: 80px;
+  float: left;
+  margin-right: 20px;
+}
+footer p{
+  color: #fff;
+  font-size: 9px;
+  line-height: 60px;
+  padding-left: 15px;
+}
